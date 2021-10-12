@@ -1,28 +1,24 @@
 <template>
-  <!-- Remove & use example component! -->
-  <HelloWorld 
-    :msg="message" 
-    @click="handler" />
-  <HelloWorld msg="Good" />
+  <h1 @click="activate">
+    Hello?!
+  </h1>
 </template>
 
 <script>
-import HelloWorld from '~/components/HelloWorld'
-
 export default {
-  components: {
-    HelloWorld
-  },
-  data() {
+  data(){
     return {
-      message: 'Hello Vue!'
+      isActive:false
     }
   },
-  methods: {
-    handler() {
-      console.log(this.message)
-      this.message += '!'
+  methods:{
+    activate(){
+      this.isActive = true;
     }
   }
 }
 </script>
+
+<style>
+
+</style>
