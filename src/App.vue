@@ -15,9 +15,9 @@
   -->
 
   <!-- 이미 계산되서 한번만 연산하고 나머지 [캐싱] 처리한다. -->
-  <h1>{{ computedMessage }}</h1>
-  <h1>{{ computedMessage }}</h1>
-  <h1>{{ computedMessage }}</h1>
+  <h1>{{ revesedMessage }}</h1>
+  <h1>{{ revesedMessage }}</h1>
+  <h1>{{ revesedMessage }}</h1>
 </template>
 
 <script>
