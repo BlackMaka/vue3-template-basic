@@ -1,19 +1,10 @@
 <template>
   <div>
-    <MyBtn>
-      <span style="color:red">Apple</span>
-    </MyBtn>
-    <MyBtn color="royalblue">
+    <MyBtn 
+      class="sample"
+      style="color:red">
       Banana
     </MyBtn>
-    <MyBtn
-      large
-      :color="color">
-      Cherry
-    </MyBtn>
-    <!-- :바인딩 차이점은 숫자로 타입까지 인식가능 -->
-    
-    <MyBtn>Orange</MyBtn>
   </div>
 </template>
 
@@ -23,14 +14,12 @@ export default {
   components:{
     MyBtn
   },
-  data(){
-    return {
-      color:'#000'
-    }
-  }
 }
 </script>
 
-<style>
-
+// scoped 쓰면 적용안됨
+<style lang="scss" >
+  .sample{
+    background-color: orange;
+  }
 </style>
