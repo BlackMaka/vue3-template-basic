@@ -15,6 +15,14 @@
 
 <script>
 //npm i -D shortid
+//배열변이감지 메서드
+// push()
+// pop()
+// shift()
+// unshift()
+// splice()
+// sort()
+// reverse()
 import shortid from 'shortid'
 export default {
   data (){
