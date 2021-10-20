@@ -1,28 +1,33 @@
 <template>
-  <!-- Remove & use example component! -->
-  <HelloWorld 
-    :msg="message" 
-    @click="handler" />
-  <HelloWorld msg="Good" />
+  <div>
+    <input
+      type="text"
+      @keydown.enter="handler" />
+    <input
+      type="text"
+      @keydown.a="handlerAkey" />
+    <input
+      type="text"
+      @keydown.ctrl.shift.a="handlerCtrlShiftA" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from '~/components/HelloWorld'
-
 export default {
-  components: {
-    HelloWorld
-  },
-  data() {
-    return {
-      message: 'Hello Vue!'
-    }
-  },
-  methods: {
-    handler() {
-      console.log(this.message)
-      this.message += '!'
+  methods:{
+    handler(){
+      console.log('Enter');
+    },
+    handlerAkey(){
+      console.log('a');
+    },
+    handlerCtrlShiftA(){
+      console.log('ctrl + shift + a');
     }
   }
 }
 </script>
+
+<style>
+
+</style>
