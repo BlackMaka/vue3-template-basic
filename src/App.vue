@@ -1,8 +1,8 @@
 <template>
   <div>
     <MyBtn 
-      class="sample"
-      style="color:red">
+      @clickEvent="clickMsg"
+      @change-msg="inputMsg">
       Banana
     </MyBtn>
   </div>
@@ -14,12 +14,19 @@ export default {
   components:{
     MyBtn
   },
+  methods:{
+    clickMsg(event){
+      console.log('click');
+      //emit 반환데이터 업승면 undefiend뜬다.
+      console.log(event);
+    },
+    inputMsg(msg){
+      console.log(msg);
+    }
+  }
 }
 </script>
 
-// scoped 쓰면 적용안됨
-<style lang="scss" >
-  .sample{
-    background-color: orange;
-  }
+<style  >
+  
 </style>
