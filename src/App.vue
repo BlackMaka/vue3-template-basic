@@ -1,9 +1,19 @@
 <template>
   <div>
-    <MyBtn 
-      @clickEvent="clickMsg"
-      @change-msg="inputMsg">
+    <MyBtn />
+    <MyBtn>
       Banana
+    </MyBtn>
+    
+    <MyBtn>
+      <!-- <template v-slot:name> -->
+      <template #name>
+        <span>Banana</span>
+      </template>
+      <!-- <template v-slot:icon> -->
+      <template #icon>
+        <span>(B)</span>
+      </template>
     </MyBtn>
   </div>
 </template>
@@ -14,16 +24,6 @@ export default {
   components:{
     MyBtn
   },
-  methods:{
-    clickMsg(event){
-      console.log('click');
-      //emit 반환데이터 업승면 undefiend뜬다.
-      console.log(event);
-    },
-    inputMsg(msg){
-      console.log(msg);
-    }
-  }
 }
 </script>
 
